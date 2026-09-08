@@ -14,6 +14,16 @@ This HTTP web server was implemented from scratch using the **Bonezegei Scriptin
 ### Route Architecture
 The server listens on `http://localhost:8080` and manages three primary routing behaviors:
 
+| Route / Endpoint | Description | Status Code |
+| :--- | :--- | :--- |
+| `/` | Application landing / home page | `200 OK` |
+| `/about` | Information page regarding the project and implementation | `200 OK` |
+| `/*` *(unmapped)* | Wildcard fallback for undefined paths (e.g., `/anything`, `/home`) | `404 Not Found` |
+
+---
+
+### Usage Instructions:
+
 You can navigate through different endpoints in the browser by entering these:
 
 Home Page:
@@ -26,14 +36,6 @@ http://localhost:8080/about
 http://localhost:8080/anything
 (Or any other non-existent route like /home, /test, /user)
 Triggers a 404 Not Found response.
-
-| Route / Endpoint | Description | Status Code |
-| :--- | :--- | :--- |
-| `/` | Application landing / home page | `200 OK` |
-| `/about` | Information page regarding the project and implementation | `200 OK` |
-| `/*` *(unmapped)* | Wildcard fallback for undefined paths (e.g., `/anything`, `/home`) | `404 Not Found` |
-
----
 
 ## 2. Installation & Setup Guide
 
